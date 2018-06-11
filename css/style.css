@@ -1,12 +1,29 @@
 /******************** MAIN CSS *************************/
 
-/*******************************************************/
-
 body {
     margin: 0;
     padding: 0;
-    background-color: #ebebeb;
+    background-color: #fafbfc;
 }
+
+/**********to give an element a card look ***************/
+
+.card {
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.75);
+    padding: 15px;
+}
+
+/*********to align an element at the center****************/
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*****************************************************************************/
 
 .profile-pic {
     border-radius: 50%;
@@ -27,11 +44,19 @@ body {
     font-weight: normal;
 }
 
+/**************************************************************************/
+
 .project-card-head,
 .skill-card-head {
-    font-family: 'Exo', sans-serif;
-    font-weight: bold;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: normal;
     text-align: center;
+}
+
+.project,
+.skill {
+display: flex;
+flex-wrap: wrap;
 }
 
 .project-box,
@@ -68,7 +93,7 @@ body {
     box-shadow: 0px 2px 6px 0px rgba(87, 2, 9, 0.75);
 }
 
-/* customization of font awesome contact icons*/
+/********** customization of font awesome contact icons***************/
 
 .github {
     color: #800080;
@@ -90,63 +115,51 @@ body {
     color: #3b5998;
 }
 
-/*footer section */
+/***********************footer section **********************/
 
 .footer {
-    background-color: rgb(77, 77, 77);
+    background-color: rgb(58, 58, 58);
     padding: 10px;
 }
 
 .footer-note {
-    color: white;
+    color: rgb(221, 221, 221);
     font-family: 'Exo', sans-serif;
     text-align: center;
     line-height: 1.25em;
 }
 
-/*to give an element a card look */
+/********************** CSS FOR RESPONSIVE DESIGN ***************************/
 
-.card {
-    background-color: rgb(255, 255, 255);
-    border-radius: 4px;
-    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.75);
-    padding: 10px;
-}
+/****** Responsive design for mobile and tablet sized device screens-*******/
 
-/*to align an element at the center*/
-
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/************* CSS FOR RESPONSIVE DESIGN **************/
-
-/******************************************************/
-
-/* Responsive design for mobile sized device screens- */
-
-@media screen and (max-width:500px) {
+@media screen and (max-width:1024px) {
     .profile,
     .contact,
     .project,
     .skill {
-        margin: 10px;
+        width:80%;
+        margin: 15px;
+        margin-left:auto;
+        margin-right:auto;
     }
+
     .profile {
         margin-top: 100px;
     }
+
     .profile-pic {
         margin-top: -80px;
         display: block;
         margin-left: auto;
         margin-right: auto;
     }
+
     .name {
         margin-top: -90px;
         text-align: center;
     }
+
     .about {
         margin-top: -20px;
         padding: 2px;
@@ -154,27 +167,35 @@ body {
         text-align: center;
         line-height: 1.25em;
     }
+
     .contact-link {
         text-decoration: unset;
     }
+    
     .contact-logo-holder {
-        margin-left: 7%;
+        text-align: center;
     }
+    
     .contact-logo {
         padding: 6px;
-        margin-left: auto;
+        margin:0;
     }
+    
     .project-box,
     .skill-box {
         width: 90%;
-        margin: 20px auto;
+        margin: 30px auto;
         background-color: rgb(208, 250, 234);
     }
+    
     .project-pic,
     .skill-pic {
         width: 100%;
         border-radius: 4px;
+        margin-left: auto;
+        margin-right: auto;
     }
+    
     .project-name,
     .skill-name {
         text-align: center;
@@ -183,12 +204,44 @@ body {
         color: rgb(34, 32, 32);
         font-weight: normal;
     }
+    
+    .project-card-head,
+    .skill-card-head {
+        margin-bottom: 0;
+       text-align: center;
+    }
+    
 }
 
-/* Responsive design for tablet devices */
+@media screen and (max-width:355px) {
+    .contact-logo {
+        padding: 2px;
+        margin:0;
+    }
+}
 
-@media screen and (min-width: 501px) and (max-width: 1024px) {}
+/*********** Responsive design tweaks for tablet devices ****************/
 
-/* Responsive design for laptop and big screens */
+@media screen and (min-width: 501px) and (max-width: 1024px) {
+
+    .profile,
+    .contact {
+        width:80%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .contact-logo {
+        padding: 16px;
+    }
+
+    .project-box,
+    .skill-box {
+        width:40%;
+        display: unset;
+    }
+}
+
+/******** Responsive design tweaks for laptop and big screens ***********/
 
 @media screen and (min-width:1025px) {}
