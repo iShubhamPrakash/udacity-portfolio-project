@@ -8,16 +8,6 @@ body {
     background-color: #ebebeb;
 }
 
-/* .navigation-bar {
-    width: 100%;
-    height: 60px;
-    z-index: 100;
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.582);
-    display: flex;
-    flex-wrap: wrap;
-} */
-
 .profile-pic {
     border-radius: 50%;
     width: 160px;
@@ -37,22 +27,26 @@ body {
     font-weight: normal;
 }
 
-.project-card-head {
+.project-card-head,
+.skill-card-head {
     font-family: 'Exo', sans-serif;
     font-weight: bold;
     text-align: center;
 }
 
-.project-box {
+.project-box,
+.skill-box {
     width: 300px;
 }
 
-.project-pic {
+.project-pic,
+.skill-pic {
     width: 100%;
     border-radius: 4px;
 }
 
-.project-name {
+.project-name,
+.skill-name {
     text-align: center;
     font-size: 150%;
     font-family: 'Exo', sans-serif;
@@ -63,11 +57,51 @@ body {
 .project-link {
     text-decoration: none;
 }
-.project-box:hover {
+
+.project-box:hover,
+.skill-box:hover {
     box-shadow: 0px 2px 20px 0px rgba(40, 87, 2, 0.75);
 }
-.project-box:active {
+
+.project-box:active,
+.skill-box:active {
     box-shadow: 0px 2px 6px 0px rgba(87, 2, 9, 0.75);
+}
+
+/* customization of font awesome contact icons*/
+
+.github {
+    color: #800080;
+}
+
+.linkedin {
+    color: #0077b5;
+}
+
+.twitter {
+    color: #1da1f3;
+}
+
+.google {
+    color: #dc4538;
+}
+
+.facebook {
+    color: #3b5998;
+}
+
+/*footer section */
+
+.footer {
+    background-color: rgb(77, 77, 77);
+    padding: 10px;
+}
+
+.footer-note {
+    color: white;
+    font-family: 'Exo', sans-serif;
+    text-align: center;
+    line-height: 1.25em;
 }
 
 /*to give an element a card look */
@@ -96,7 +130,8 @@ body {
 @media screen and (max-width:500px) {
     .profile,
     .contact,
-    .project {
+    .project,
+    .skill {
         margin: 10px;
     }
     .profile {
@@ -129,27 +164,25 @@ body {
         padding: 6px;
         margin-left: auto;
     }
-
-
-    .project-box {
+    .project-box,
+    .skill-box {
         width: 90%;
         margin: 20px auto;
         background-color: rgb(208, 250, 234);
     }
-    
-    .project-pic {
+    .project-pic,
+    .skill-pic {
         width: 100%;
         border-radius: 4px;
     }
-    
-    .project-name {
+    .project-name,
+    .skill-name {
         text-align: center;
         font-size: 150%;
         font-family: 'Exo', sans-serif;
         color: rgb(34, 32, 32);
         font-weight: normal;
     }
-    
 }
 
 /* Responsive design for tablet devices */
