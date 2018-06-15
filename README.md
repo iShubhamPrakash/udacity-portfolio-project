@@ -1,9 +1,11 @@
-# udacity-portfolio-project
-Portfolio project for Udacity Front-end web developer Nanodegree course.
+# Google india developer scholarship program
 
-` Google india developer scholarship program `
+## Udacity Front-end web developer Nanodegree course
 
-## Technologies used:
+Project 1: Portfolio
+
+## Technologies used
+
 - HTML5
 - CSS3
 - BOOTSTRAP
