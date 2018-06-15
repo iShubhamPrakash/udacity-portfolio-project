@@ -2,8 +2,8 @@
 
 /*----------------  PRESENTATIONAL CSS  ---------------------*/
 
-.body {
-    background-color: #89e7f362;
+body {
+    background-color: #ffffff;
 }
 
 .profile {
@@ -66,7 +66,6 @@ body {
 /*Class to give an element a card look*/
 
 .card {
-    background-color: rgb(255, 255, 255);
     border-radius: 4px;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.75);
     padding: 10px;
