@@ -1,102 +1,97 @@
-/******************** MAIN CSS *************************/
+/******************** GLOBAL CSS *************************/
 
 body {
     margin: 0;
-    padding: 0;
-    background-color: #fafbfc;
-}
-
-/**********to give an element a card look ***************/
-
-.card {
-    background-color: rgb(255, 255, 255);
-    border-radius: 4px;
-    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.75);
     padding: 15px;
+    background-color: #f5f5f5;
 }
 
-/*********to align an element at the center****************/
-
-.center {
-    display: block;
+.container {
+    margin: 0;
+    padding: 0;
+    max-width: 1300px;
     margin-left: auto;
     margin-right: auto;
 }
 
-/*****************************************************************************/
+/*Class to give an element a card look*/
+
+.card {
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.75);
+    padding: 10px;
+}
+
+/******************** Profile section *********************/
+
+.profile,
+.project,
+.skill {
+    margin: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile {
+    margin: 15px;
+    margin-top: 100px;
+}
 
 .profile-pic {
     border-radius: 50%;
     width: 160px;
     height: 160px;
-    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.75);
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.75);
+    margin-top: -90px;
+}
+
+.profile-info {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .name {
     font-family: 'Muli', sans-serif;
     color: rgb(54, 54, 54);
     font-weight: bold;
+    text-align: center;
+    margin: 0;
 }
 
 .about {
+    font-family: 'Exo', sans-serif;
     color: rgb(80, 80, 80);
-    font-family: 'Exo', sans-serif;
     font-weight: normal;
+    text-align: center;
+    margin: 0;
+    padding: 2px;
+    font-size: 16px;
+    line-height: 1.25em;
 }
 
-/**************************************************************************/
+/********** customization of buttons and font awesome contact icons***************/
 
-.project-card-head,
-.skill-card-head {
-    font-family: 'Orbitron', sans-serif;
-    font-weight: normal;
+.contact {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-logo-holder {
     text-align: center;
 }
 
-.project,
-.skill {
-display: flex;
-flex-wrap: wrap;
+.contact-link {
+    text-decoration: unset;
+    padding: 5px;
 }
-
-.project-box,
-.skill-box {
-    width: 300px;
-}
-
-.project-pic,
-.skill-pic {
-    width: 100%;
-    border-radius: 4px;
-}
-
-.project-name,
-.skill-name {
-    text-align: center;
-    font-size: 150%;
-    font-family: 'Exo', sans-serif;
-    color: rgb(34, 32, 32);
-    font-weight: normal;
-}
-
-.project-link {
-    text-decoration: none;
-}
-
-.project-box:hover,
-.skill-box:hover {
-    box-shadow: 0px 2px 20px 0px rgba(40, 87, 2, 0.75);
-}
-
-.project-box:active,
-.skill-box:active {
-    box-shadow: 0px 2px 6px 0px rgba(87, 2, 9, 0.75);
-}
-
-/********** customization of font awesome contact icons***************/
 
 .github {
-    color: #800080;
+    color: #2e3c49;
 }
 
 .linkedin {
@@ -115,6 +110,64 @@ flex-wrap: wrap;
     color: #3b5998;
 }
 
+/***********************************************************/
+
+.project-box,
+.skill-box {
+    background-image: url("/images/box.jpg");
+    width: 90%;
+    margin: 20px auto;
+    max-width: 280px;
+}
+
+.project-pic {
+    border-radius: 50%;
+    width: 85%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.75);
+}
+
+.skill-pic {
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.project-card-head,
+.skill-card-head {
+    font-family: 'Exo', sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.project-name,
+.skill-name {
+    font-family: 'Exo', sans-serif;
+    font-size: 150%;
+    text-align: center;
+    color: rgb(34, 32, 32);
+    text-transform: uppercase;
+}
+
+.project-link {
+    text-decoration: none;
+}
+
+.project-box:hover,
+.skill-box:hover {
+    box-shadow: 0px 2px 20px 0px rgba(2, 81, 87, 0.75);
+}
+
+.project-box:active,
+.skill-box:active {
+    box-shadow: 0px 2px 6px 0px rgba(0, 69, 148, 0.75);
+}
+
 /***********************footer section **********************/
 
 .footer {
@@ -129,119 +182,82 @@ flex-wrap: wrap;
     line-height: 1.25em;
 }
 
-/********************** CSS FOR RESPONSIVE DESIGN ***************************/
-
-/****** Responsive design for mobile and tablet sized device screens-*******/
-
-@media screen and (max-width:1024px) {
-    .profile,
-    .contact,
-    .project,
-    .skill {
-        width:80%;
-        margin: 15px;
-        margin-left:auto;
-        margin-right:auto;
-    }
-
-    .profile {
-        margin-top: 100px;
-    }
-
-    .profile-pic {
-        margin-top: -80px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .name {
-        margin-top: -90px;
-        text-align: center;
-    }
-
-    .about {
-        margin-top: -20px;
-        padding: 2px;
-        font-size: 16px;
-        text-align: center;
-        line-height: 1.25em;
-    }
-
-    .contact-link {
-        text-decoration: unset;
-    }
-    
-    .contact-logo-holder {
-        text-align: center;
-    }
-    
-    .contact-logo {
-        padding: 6px;
-        margin:0;
-    }
-    
-    .project-box,
-    .skill-box {
-        width: 90%;
-        margin: 30px auto;
-        background-color: rgb(208, 250, 234);
-    }
-    
-    .project-pic,
-    .skill-pic {
-        width: 100%;
-        border-radius: 4px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .project-name,
-    .skill-name {
-        text-align: center;
-        font-size: 150%;
-        font-family: 'Exo', sans-serif;
-        color: rgb(34, 32, 32);
-        font-weight: normal;
-    }
-    
-    .project-card-head,
-    .skill-card-head {
-        margin-bottom: 0;
-       text-align: center;
-    }
-    
+.footer-logo {
+    color: rgb(221, 221, 221);
 }
 
-@media screen and (max-width:355px) {
-    .contact-logo {
-        padding: 2px;
-        margin:0;
+/*************** CSS TWEAKS FOR RESPONSIVE DESIGN ***************/
+
+/* Responsive design for mobile and tablet sized device screens */
+
+@media screen and (max-width:330px) {
+    .contact-link {
+        padding: 0;
+        margin: 0;
+    }
+    .project-box,
+    .skill-box {
+        width: 200px;
+    }
+    .project-card-head,
+    .skill-card-head {
+        font-size: 1.5em;
     }
 }
 
 /*********** Responsive design tweaks for tablet devices ****************/
 
-@media screen and (min-width: 501px) and (max-width: 1024px) {
-
-    .profile,
-    .contact {
-        width:80%;
-        margin-left:auto;
-        margin-right:auto;
+@media screen and (min-width: 501px) and (max-width: 1023px) {
+    .profile {
+        max-width: 730px;
+        margin-left: auto;
+        margin-right: auto;
     }
-
-    .contact-logo {
-        padding: 16px;
+    .project,
+    .skill {
+        max-width: 890px;
+        margin-left: auto;
+        margin-right: auto;
     }
-
+    .profile {
+        display: block;
+    }
+    .profile-pic {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
     .project-box,
     .skill-box {
-        width:40%;
-        display: unset;
+        margin: 20px;
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
 /******** Responsive design tweaks for laptop and big screens ***********/
 
-@media screen and (min-width:1025px) {}
+@media screen and (min-width:1024px) {
+    .profile {
+        display: block;
+        max-width: 1015px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .profile-pic {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .project,
+    .skill {
+        max-width: 1089px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .contact-link {
+        padding: 10px;
+        margin: 10px;
+    }
+}
