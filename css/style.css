@@ -3,10 +3,16 @@
 /*----------------  PRESENTATIONAL CSS  ---------------------*/
 
 body {
-    background-color: #ffffff;
+    /* fallback for old browsers */
+    background: #283048;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to bottom, #859398, #283048);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to bottom, #859398, #283048);
 }
 
 .profile {
+    background-color: #ffffff;
     background-image: url("/images/white.png");
 }
 
@@ -24,13 +30,14 @@ body {
 
 .project-box,
 .skill-box {
+    background-color: #ffffff;
     background-image: url("/images/box.jpg");
 }
 
 .project-card-head,
 .skill-card-head {
     font-family: 'Exo', sans-serif;
-    color: #474e4a;
+    color: #ffffff;
 }
 
 .project-name,
@@ -42,7 +49,7 @@ body {
 }
 
 .footer {
-    background-color: #1f3535;
+    background-color: #21283b;
 }
 
 /**********************************************************/
